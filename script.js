@@ -29,7 +29,12 @@ function setCountdown() {
 		(diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
 	);
 	minutes.innerHTML = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-	seconds.innerHTML = Math.floor((diff % (1000 * 60)) / 1000);
+
+	if (Math.floor((diff % (1000 * 60)) / 1000) < 10) {
+		seconds.innerHTML = '0' + Math.floor((diff % (1000 * 60)) / 1000);
+	} else {
+		seconds.innerHTML = Math.floor((diff % (1000 * 60)) / 1000);
+	}
 }
 
 //random Text
