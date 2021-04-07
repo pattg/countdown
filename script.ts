@@ -3,8 +3,12 @@ let hours = document.querySelector('.hours');
 let minutes = document.querySelector('.minutes');
 let seconds = document.querySelector('.seconds');
 let randomText = document.querySelector('.countdown__random-text');
+let coundownWrapper = document.querySelector('.countdown__wrapper');
+let countdownModal= document.querySelector('.countdown__modal');
 
-let endDate = new Date('April 14, 2021 21:00:00').getTime();
+console.log(countdownModal);
+
+let endDate = new Date('April 7, 2021 21:56:00').getTime();
 const textArray = [
 	'random stuff',
 	'Wenn du wüsstest',
@@ -34,6 +38,13 @@ function setCountdown(): void {
 		seconds.innerHTML = '0' + Math.floor((diff % (1000 * 60)) / 1000);
 	} else {
 		seconds.innerHTML = Math.floor((diff % (1000 * 60)) / 1000).toString();
+	}
+
+	if((parseInt(days.innerHTML)) && (parseInt(hours.innerHTML) && (parseInt(minutes.innerHTML) && (parseInt(seconds.innerHTML)) <= 0 ))){
+		coundownWrapper.classList.add('hidden');
+		randomText.classList.add('hidden');
+		countdownModal.classList.remove('hidden');
+		countdownModal.classList.add('visible');
 	}
 }
 

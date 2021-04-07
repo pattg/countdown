@@ -3,7 +3,10 @@ var hours = document.querySelector('.hours');
 var minutes = document.querySelector('.minutes');
 var seconds = document.querySelector('.seconds');
 var randomText = document.querySelector('.countdown__random-text');
-var endDate = new Date('April 14, 2021 21:00:00').getTime();
+var coundownWrapper = document.querySelector('.countdown__wrapper');
+var countdownModal = document.querySelector('.countdown__modal');
+console.log(countdownModal);
+var endDate = new Date('April 7, 2021 21:56:00').getTime();
 var textArray = [
     'random stuff',
     'Wenn du wüsstest',
@@ -28,6 +31,12 @@ function setCountdown() {
     }
     else {
         seconds.innerHTML = Math.floor((diff % (1000 * 60)) / 1000).toString();
+    }
+    if ((parseInt(days.innerHTML)) && (parseInt(hours.innerHTML) && (parseInt(minutes.innerHTML) && (parseInt(seconds.innerHTML)) <= 0))) {
+        coundownWrapper.classList.add('hidden');
+        randomText.classList.add('hidden');
+        countdownModal.classList.remove('hidden');
+        countdownModal.classList.add('visible');
     }
 }
 //random Text

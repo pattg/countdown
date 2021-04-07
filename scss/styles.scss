@@ -56,4 +56,29 @@
 	&__desc {
 		font-size: 10px;
 	}
+
+	&__modal {
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		width: 50%;
+		height: 30%;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		max-width: 70%;
+		margin-bottom: 20px;
+		border-radius: 20px;
+		box-shadow: -2px 2px 17px -8px rgba(0, 0, 0, 0.81);
+		-webkit-box-shadow: -2px 2px 17px -8px rgba(0, 0, 0, 0.81);
+		-moz-box-shadow: -2px 2px 17px -8px rgba(0, 0, 0, 0.81);
+		background-color: rgba(81, 255, 183, 0.8);
+	}
+}
+
+.hidden {
+	display: none;
+}
+.visible {
+	display: flex;
 }
