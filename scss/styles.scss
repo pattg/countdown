@@ -21,6 +21,9 @@
 		-webkit-box-shadow: -2px 2px 17px -8px rgba(0, 0, 0, 0.81);
 		-moz-box-shadow: -2px 2px 17px -8px rgba(0, 0, 0, 0.81);
 		background-color: hsla(360, 100, 100, 0.8);
+		@include breakpoint('s') {
+			padding: 10px 100px;
+		}
 	}
 	&__title {
 		display: flex;
@@ -30,7 +33,7 @@
 		font-size: 50px;
 
 		@include breakpoint('s') {
-			font-size: 20px;
+			display: none;
 		}
 	}
 
@@ -69,6 +72,9 @@
 		box-shadow: -2px 2px 17px -8px rgba(0, 0, 0, 0.81);
 		background-color: rgba(255, 255, 255, 0.822);
 		padding: 10px;
+		@include breakpoint('s') {
+			font-size: 10px;
+		}
 	}
 
 	&__modal {

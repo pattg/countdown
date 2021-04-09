@@ -29,6 +29,9 @@
     -webkit-box-shadow: -2px 2px 17px -8px rgba(0, 0, 0, 0.81);
     -moz-box-shadow: -2px 2px 17px -8px rgba(0, 0, 0, 0.81);
     background-color: rgba(255, 255, 255, 0.8); }
+    @media (max-width: 667px) {
+      .countdown__wrapper {
+        padding: 10px 100px; } }
   .countdown__title {
     display: flex;
     justify-content: center;
@@ -37,7 +40,7 @@
     font-size: 50px; }
     @media (max-width: 667px) {
       .countdown__title {
-        font-size: 20px; } }
+        display: none; } }
   .countdown__timer {
     display: flex;
     justify-content: center;
@@ -63,6 +66,9 @@
     box-shadow: -2px 2px 17px -8px rgba(0, 0, 0, 0.81);
     background-color: rgba(255, 255, 255, 0.822);
     padding: 10px; }
+    @media (max-width: 667px) {
+      .countdown__random-text {
+        font-size: 10px; } }
   .countdown__modal {
     align-items: center;
     justify-content: center;
