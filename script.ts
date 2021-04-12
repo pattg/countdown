@@ -9,9 +9,13 @@ let countdownModal = document.querySelector('.countdown__modal');
 
 let endDate = new Date('April 14, 2021 21:00:00').getTime();
 const textArray = [
-	'Schnapp dir Stift und Zettel',
-	'Zieh dir etwas bequemes an',
-	'Es wird spannend',
+	'Mach dich bereit',
+	'Sanna Virtannen',
+	'Sa**a Vi*tan**n',
+	'Rist**järvi',
+	'Finnland',
+	'1* Jahre',
+	'verschwunden',
 ];
 
 setInterval(function () {
@@ -71,22 +75,6 @@ function setCountdown(): void {
 }
 
 function setText() {
-	// let displayIndex: number = 0;
-	// let delay: number = 10000;
-
-	// setInterval(() => {
-	// 	if (randomText) {
-	// 		randomText.innerHTML = textArray[displayIndex];
-	// 	}
-
-	// 	// Move to the next item in dialog
-	// 	displayIndex++;
-
-	// 	// If display index goes out of index range, start again
-	// 	if (displayIndex >= textArray.length) {
-	// 		displayIndex = 0;
-	// 	}
-	// }, delay);
 	let count = 0;
 
 	setInterval(function () {
@@ -96,5 +84,5 @@ function setText() {
 				.text(textArray[count % textArray.length])
 				.fadeIn(2000);
 		});
-	}, 10000);
+	}, 100000);
 }
