@@ -10,7 +10,6 @@ let countdownModal = document.querySelector('.countdown__modal');
 let endDate = new Date('April 14, 2021 21:00:00').getTime();
 const textArray = [
 	'Mach dich bereit',
-	'Sanna Virtannen',
 	'Sa**a Vi*tan**n',
 	'Rist**järvi',
 	'Finnland',
